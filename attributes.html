@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Attributes</title>
+    <style>
+        body {
+            font-family: 'Glacial Indifference', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-image: url(Picture/HEADER\ \(1\).jpg);
+            background-size: cover;
+        }
+        header {
+            font-size: 18px;
+            color: #ffffff;
+            text-align: center;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-image: url(Picture/hijautuabg.jpg);
+        }
+        .time, .logo {
+            position: absolute;
+            padding: 5px;
+            border-radius: 5px;
+        }
+    
+        .time {
+            top: 25px;
+            right: 13px;
+            font-size: 16px;
+            color: #000;
+        }
+    
+        .logo {
+            top: 1px;
+            left: 1px;
+        }
+        video.videobg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+        nav2 {
+            box-sizing: border-box;
+            margin-left: 4px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-image: url(Picture/hijaubg.jpg);
+            padding: 4px;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: row;
+        }
+        nav {
+            padding: 30px;
+            font-size: 16px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-image: url(Picture/hijaubg.jpg);
+        }
+        nav2 a {
+            color: #333;
+            border-radius: 5px;
+            text-align: center;
+            display: inline-block;
+            padding: 0 267px;
+            margin-top: 3px;
+            text-decoration: none;
+        }
+        nav a {
+            display: block;
+            color: #333;
+            padding: 13px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        nav a:hover {
+            background-color: #AA8D57;
+            color: white;
+            cursor: pointer;
+        }
+        nav2 a:hover {
+            background-color: #AA8D57;
+            color: white;
+            border-bottom-right-radius: 60px;
+            border-bottom-left-radius: 60px;
+            cursor: pointer;
+        }
+        main {
+            display: flex;
+            flex: 1;
+            flex-wrap: nowrap;
+            margin: 5px;
+        }
+        .main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            width: 990px;
+            padding-bottom: 30px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            gap: 10px;
+        }
+        .media {
+            flex: 4;
+            padding: 1em;
+            background-color: #FFF;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-right: 5px;
+            margin-top: 20px;
+        }
+        section {
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+        }
+        .main img{
+            width: 50%;
+        }
+        .content {
+            padding-top: 20px;
+            text-align: center;
+            margin: 0 149px;
+            align-items: center;
+            padding-bottom: auto;
+        }
+        .content-section {
+            align-items: center;
+            justify-content: space-between;
+            width: 900px;
+            background: rgba(255, 255, 255, 0.8);
+            padding-bottom: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            gap: 10px;
+        }
+        footer {
+            background-image: url(Picture/hijautuabg.jpg);
+            color: #fff;
+            padding: 1px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        button, .button-link {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 14px;
+            color: white;
+            background-color: #AA8D57;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover, .button-link:hover {
+            background-color: #8E6B45;
+        }
+        #topButton {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99;
+            font-size: 18px;
+            border: none;
+            outline: none;
+            background-color: #AA8D57;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 10px;
+            transition: background-color 0.3s;
+        }
+        #topButton:hover {
+            background-color: #8E6B45;
+        }
+        h2 {
+            font-family: 'Lobster', cursive;
+            color: #333;
+        }
+    </style>    
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Caveat+Brush&family=Glacial+Indifference&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <button onclick="topFunction()" id="topButton" title="Go to top">Top &#8593</button>
+
+    <video class="videobg" autoplay muted loop>
+        <source src="Video/greenbg.mp4" type="video/mp4">
+    </video>
+
+    <header>
+        <h1 style="color:#ffffff; font-family: 'Caveat Brush', cursive;">&#129361 PERSONAL ATTRIBUTES &#129361</h1>
+        <div class="time" id="time"></div>
+        <div class="logo">
+            <img src="Picture/uitm.png" alt="uitm" style="width: 110px; height: 80px;"> <!-- Adjust width and height as needed -->
+        </div>
+    </header>
+
+    <main>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="aboutme.html">About Me</a>
+            <a href="education.html">Education</a>
+            <a href="#hardskills" onclick="changeContent('hardskills')" style="background-color: rgb(198, 198, 186);">Personal Attributes</a>
+            <a href="work.html">Work Experiences</a>
+            <a href="involvement.html">Active Involvement</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <section>
+            <nav2>
+                <a href="#hardskills" onclick="changeContent('hardskills')">HARD SKILLS</a>
+                <a href="#softskills" onclick="changeContent('softskills')">SOFT SKILLS</a>
+            </nav2>
+            <section class="content">
+                <p id="content-area"></p>
+            </section>
+        </section>
+
+        <script>
+            function changeContent(section) {
+                let content = {
+                    "hardskills": {
+                        text: `
+                            <div class="main">
+                                <div class="content-section">
+                                    <h2>Microsoft Words</h2>
+                                    <a href="Picture/wordevidence.png" target="_blank">
+                                        <img src="Picture/wordevidence.png" alt="wordevidence" title="View Image">
+                                    </a>
+                                    <ul style="padding: 0 150px; text-align: left;">
+                                        <li>Expertise in creating professional reports and organizing data.</li>
+                                        <li>Skilled in advanced document formatting, including multi-style page numbering (Example: Roman numerals for earlier sections and numbers for subsequent sections).</li>
+                                        <li>Ensure well-structured documents that meet academic and professional standards.</li>
+                                    </ul>
+                                </div>                
+                                <div class="content-section">
+                                    <h2>PowerPoint</h2>
+                                    <a href="Picture/powerpointevidence.png" target="_blank">
+                                        <img src="Picture/powerpointevidence.png" alt="powerpointevidence" title="View Image">
+                                    </a>
+                                    <ul style="padding: 0 150px; text-align: left;">
+                                        <li>Proficient in utilizing PowerPoint's advanced features to customize layouts and designs.</li>
+                                        <li>Skilled at ensuring presentations are visually appealing and effective in conveying information.</li>
+                                        <li>Experienced in incorporating audio and video elements to enrich presentations.</li>
+                                        <li>Adept at captivating audiences through multimedia integration in presentations.</li>
+                                    </ul>
+                                </div>
+                                <div class="content-section">
+                                    <h2>Excel</h2>
+                                    <a href="Picture/excelevidence.png" target="_blank">
+                                        <img src="Picture/excelevidence.png" alt="excelevidence" title="View Image">
+                                    </a>
+                                    <ul style="padding: 0 150px; text-align: left;">
+                                        <li>Skilled in Excel for meticulous data management, particularly in organizing data on incoming campus students' MAGIM shirt purchases.</li>
+                                        <li>Proficiently create and manage separate tables to facilitate seamless data transfer and analysis.</li>
+                                        <li>Demonstrated ability to utilize Excel functions to automate statistical computations such as mean and standard deviation, crucial for academic assignments and analytical tasks.</li>
+                                    </ul>
+                                </div>
+                                <div class="content-section">
+                                    <h2><i>Additional</i></h2>
+                                    <h3 style="font-family: 'Lobster', cursive;">Canva</h3>
+                                    <a href="Picture/canvaevidence.png" target="_blank">
+                                        <img src="Picture/canvaevidence.png" alt="canvaevidence" title="View Image">
+                                    </a>
+                                    <ul style="padding: 0 150px; text-align: left;">
+                                        <li>Skilled in utilizing Canva for various design endeavors, including crafting presentations and posters.</li>
+                                        <li>Frequently collaborate with team members, leveraging Canva's functionalities for efficient task monitoring and project completion.</li>
+                                        <li>Proficient in generating visually captivating content that fulfills a range of project needs and goals.</li>
+                                    </ul>
+                                </div>                                                          
+                            </div>
+                        `
+                    },
+                    "softskills": {
+                        text: `
+                            <div class="main">
+                                <div class="content-section">
+                                    <h2>Great Teamwork</h2>
+                                    <a href="Picture/collab1.jpg" target="_blank">
+                                        <img src="Picture/collab1.jpg" alt="collab1" width="20%" height="auto" title="Program with UPSI (Before)">
+                                    </a>
+                                    <a href="Picture/collab2.jpg" target="_blank">
+                                        <img src="Picture/collab2.jpg" alt="collab2" width="20%" height="auto" title="Program with UPSI (During)">
+                                    </a>
+                                    <a href="Picture/collab3.jpg" target="_blank">
+                                        <img src="Picture/collab3.jpg" alt="collab3" width="20%" height="auto" title="Role as Multimedia leader">
+                                    </a>
+                                    <dl style="padding: 0 60px; text-align: justify;">
+                                        <p>
+                                            <dt><b>Teamwork with Majlis Tertinggi (MT) in Universiti Pendidikan Sultan Idris (UPSI) Program</b></dt>
+                                            <dd>- Played a key role in securing sponsors for the program which then demonstrated our strong teamwork from different universities.</dd>
+                                        </p>
+                                        <p>
+                                            <dt><b>Tugas-Tugas Khas (TTK) Bureau Leader</b></dt>
+                                            <dd>- Organized and led Junior Sports activities for MAGIM by overseeing all aspects to ensure smooth execution and participant satisfaction.</dd>
+                                            <dd>- Demonstrated effective leadership and project management skills in coordinating these activities.</dd>
+                                        </p>
+                                        <p>
+                                            <dt><b>Multimedia Bureau Leader</b></dt>
+                                            <dd>- Led the Multimedia bureau in SUPRO activity and managed projects and teams to deliver impactful results.</dd>
+                                            <dd>- Successfully executed multimedia projects, showcasing strong leadership and organizational abilities.</dd>
+                                        </p>
+                                    </dl>    
+                                </div>                
+                                <div class="content-section">
+                                    <h2>Strong Communication</h2>
+                                    <a href="Picture/communicate1.jpg" target="_blank" title="Master of Ceremonies (MC)">
+                                        <img src="Picture/communicate1.jpg" alt="communicate1" width="20%" height="auto">
+                                    </a>
+                                    <a href="Video/communicate2.mp4" target="_blank" title="Master of Ceremonies (MC)">
+                                        <video controls style="width: 50%; height: auto;">
+                                            <source src="Video/communicate2.mp4" type="video/mp4">
+                                        </video>
+                                    </a>
+                                    <dl style="padding: 0 60px; text-align: justify;">
+                                        <p>
+                                            <dt><b>Master of Ceremonies (MC) for MAGIM Puncak Perdana</b></dt>
+                                            <dd>Consistently demonstrated leadership and communication skills by overseeing orientation sessions for new students every semester.</dd>
+                                        </p>
+                                        <p>
+                                            <dt><b>Program Bureau Member and Formal MC for Universiti Pendidikan Sultan Idris (UPSI) Program</b></dt>
+                                            <dd>Volunteered for an event hosted at SMK Tun Fuad Kiulu, Sabah. This effectively engaged diverse audiences and managed event proceedings.</dd>
+                                        </p>
+                                    </dl>
+                                </div>
+                                <div class="content-section">
+                                    <h2>Well-organized</h2>
+                                    <p style="padding: 0 60px; text-align: justify;">I am highly proficient in maintaining thorough organization, skillfully planning and executing tasks with precision to ensure optimal efficiency. My commitment to detailed note-taking enhances my ability to track progress and coordinate effectively, consistently contributing to successful project outcomes.</p>
+                                </div>
+                                <div class="content-section">
+                                    <h2>Creative</h2>
+                                    <p style="padding: 0 60px; text-align: justify;">I possess a keen creative flair, skilled at enhancing projects through CapCut edits, whether for enjoyment or academic completion. Continually learning new techniques, I innovate content with fresh perspectives and elevate assignments with imaginative touches. Additionally, crafting engaging posters showcase my versatile creativity in visual design.</p>
+                                </div>
+                                <div class="content-section">
+                                    <h2>Easy to Adapt</h2>
+                                    <a href="Picture/adapt1.jpg" target="_blank" title="Kursus Pengurusan Organisasi (KPO)">
+                                        <img src="Picture/adapt1.jpg" alt="adapt1" width="20%" height="auto">
+                                    </a>
+                                    <a href="Video/adapt2.mp4" target="_blank" title="Kursus Pengurusan Organisasi (KPO)">
+                                        <video controls style="width: 50%; height: auto;">
+                                            <source src="Video/adapt2.mp4" type="video/mp4">
+                                        </video>
+                                    </a>
+                                    <dl style="padding: 0 60px; text-align: justify;">
+                                        <p>I thrive in diverse environments, actively seeking new friendships and challenges to foster personal development:</p>
+                                        <p>
+                                            <dt><b>Organizational Skills</b></dt>
+                                            <dd>Honed through roles in Sekretariat Mahasiswa Fakulti (SMF) and participation in Kursus Pengurusan Organisasi (KPO) KPPIM in 2023.</dd>
+                                        </p>
+                                        <p>
+                                            <dt><b>Cultural Bridging</b></dt>
+                                            <dd>Successfully managed the challenge of studying in West Malaysia while coming from Sabah. This bridged cultural differences and built meaningful connections with peers from various backgrounds.</dd>
+                                        </p>
+                                    </dl>
+                                </div>                                                                
+                            </div>
+                        `
+                    },
+                };
+                
+                let contentArea = document.getElementById("content-area");
+                contentArea.innerHTML = content[section].text;
+            }
+        
+            document.getElementById('time').innerHTML = new Date().toLocaleDateString();
+
+            let mybutton = document.getElementById("topButton");
+            window.onscroll = function() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    mybutton.style.display = "block";
+                } else {
+                    mybutton.style.display = "none";
+                }
+            };
+
+            function topFunction() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
+        </script>        
+    </main>
+
+    <footer>
+        <p>"Strive not to be a success, but rather to be of value." - Albert Einstein</p>
+        <p>Contact: <a href="mailto:6may.ux@gmail.com">6may.ux@gmail.com</a> | Phone: <a href="tel:+601170310405">011-70310405</a></p>
+        <p>&copy; 2024 Nur May Uzma Binti Mohd Solehuddin. All rights reserved.</p>
+    </footer>
+
+</body>

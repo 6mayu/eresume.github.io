@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About May</title>
+    <style>
+        body {
+            font-family: 'Glacial Indifference', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-image: url(Picture/HEADER\ \(1\).jpg);
+            background-size: cover;
+        }
+        header {
+            font-size: 18px;
+            color: #ffffff;
+            text-align: center;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-image: url(Picture/hijautuabg.jpg);
+        }
+        .time, .logo {
+            position: absolute;
+            padding: 5px;
+            border-radius: 5px;
+        }
+        .time {
+            top: 25px;
+            right: 13px;
+            font-size: 16px;
+            color: #000;
+        }
+        .logo {
+            top: 1px;
+            left: 1px;
+        }
+        .container {
+            flex: 1;
+            display: flex;
+            padding: 5px;
+            gap: 5px;
+        }
+        nav {
+            padding: 28px;
+            font-size: 16px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-image: url(Picture/hijaubg.jpg);
+        }
+        nav a {
+            display: block;
+            color: #333;
+            padding: 13px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        nav a:hover {
+            background-color: #AA8D57;
+            color: white;
+            cursor: pointer;
+        }
+        .main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        .media1 img, .media2 video {
+            width: 100%;
+            border-radius: 10px;
+            height: auto;
+        }
+        .content-section {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            border-radius: 10px;
+            gap: 10px;
+            flex: 1;
+        }
+        .content-section2 {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background: rgba(255, 255, 255, 0.8);
+            flex: 1;
+            padding: 10px;
+        }
+        .content1, .content2 {
+            padding: 13px;
+            background: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            flex: 1;
+            text-align: center;
+        }
+        .media1 {
+            flex: none;
+            width: 24.3%;
+            margin-left: 6px;
+            margin-top: 2px;
+        }
+        .media2 {
+            flex: none;
+            width: 33.5%;
+            margin-right: 5px;
+            margin-top: 3px;
+        }
+        video.videobg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+        .button-link, button {
+            display: inline-block;
+            padding: 8px 16px;
+            font-size: 14px;
+            color: white;
+            background-color: #AA8D57;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .button-link:hover, button:hover {
+            background-color: #8E6B45;
+        }
+        .skills {
+            width: 100%;
+            margin: 25px 0;
+            padding: 0 150px;
+            border-radius: 10px;
+        }
+        .skills li {
+            list-style: none;
+        }
+        .bar {
+            display: block;
+            height: 20px;
+            border: 1px solid rgba(0,0,0,0.3);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        }
+        .bar span {
+            height: 20px;
+            display: block;
+            background: linear-gradient(135deg, rgba(236,0,140, 1) 0%, rgba(252, 103, 103, 1) 100%);
+        }
+        .malay span {
+            width: 90%;
+            text-align: right;
+            padding-right: 5px;
+            color: white;
+        }
+        .english span {
+            width: 80%;
+            text-align: right;
+            padding-right: 5px;
+            color: white;
+        }
+        .chinese span {
+            width: 70%;
+            text-align: right;
+            padding-right: 5px;
+            color: white;
+        }
+        #header {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            font-size: 18px;
+            border: none;
+            background-color: #AA8D57;
+            color: white;
+            cursor: pointer;
+            padding: 12px;
+            border-radius: 10px;
+        }
+        #header:hover {
+            background-color: #555;
+        }
+        h1, h2 {
+            font-family: 'Lobster', cursive;
+            color: #333;
+        }
+        footer {
+            background-image: url(Picture/hijautuabg.jpg);
+            color: #fff;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin-top: auto;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Caveat+Brush&family=Glacial+Indifference&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <button onclick="topFunction()" id="header" title="Go to top">Top &#8593</button>
+    
+    <video class="videobg" autoplay muted loop>
+        <source src="Video/greenbg.mp4" type="video/mp4">
+    </video>
+
+    <header>
+        <h1 style="color:#ffffff; font-family: 'Caveat Brush', cursive;">&#129361 ABOUT ME &#129361</h1>
+        <div class="time" id="time"></div>
+        <div class="logo">
+            <img src="Picture/uitm.png" alt="uitm" style="width: 110px; height: 80px;">
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="aboutme.html" style="background-color: rgb(198, 198, 186);">About Me</a>
+                <a href="education.html">Education</a>
+                <a href="attributes.html">Personal Attributes</a>
+                <a href="work.html">Work Experiences</a>
+                <a href="involvement.html">Active Involvement</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <div class="main">
+                <div class="content-section">
+                    <div class="media1">
+                        <a href="Picture/selfportrait2.jpg" target="_blank">
+                            <img src="Picture/selfportrait2.jpg" alt="selfportrait" title="View Image">
+                        </a>
+                    </div>
+                    <div class="content1">
+                        <h2>My Biodata</h2>
+                        <p><i>Full Name</i>: Nur May Uzma Binti Mohd Solehuddin</p>
+                        <p><i>Date of Birth (D.O.B)</i>: 06 May 2002</p>
+                        <p><i>Nationality</i>: Malaysia</p>
+                        <p><i>Race</i>: Dusun</p>
+                        <p><i>Religion</i>: Islam</p>
+                        <p><i>Occupation</i>: Student</p>
+                        <p><i>Marital Status</i>: Unmarried</p>
+                        <p><i>Home Address</i>: Kampung Kauluan, Tuaran, Sabah</p>
+                        <p><a href="#videorec" class="button-link">&#9829 E-Resume Recording</a></p>
+                    </div>
+                </div>
+                <div class="content-section2">
+                    <div class="skills">
+                        <h2>Language Proficiency</h2>
+                        <li><p><i>Malay</i></p><span class="bar malay"><span>90%</span></span></li>
+                        <li><p><i>English</i></p><span class="bar english"><span>80%</span></span></li>
+                        <li><p><i>Chinese</i></p><span class="bar chinese"><span>70%</span></span></li>
+                    </div>
+                </div>
+                <div class="content-section">
+                    <div class="content2">
+                        <h2>My Passions</h2>
+                        <p>Sports</p>
+                        <p>Videography and Editing</p>
+                        <p>Exploring Curiosity</p>
+                        <p>
+                            <button type="button" onclick="changeMedia('sports')" title="View Full Video">&#9829 Sports</button>
+                            <button type="button" onclick="changeMedia('videography')" title="View Full Video">&#9829 Videography & Editing</button>
+                            <button type="button" onclick="changeMedia('exploring')" title="View Full Video">&#9829 Exploring Curiosity</button>
+                        </p>
+                    </div>
+                    <div class="media2">
+                        <video id="mymedia" src="Video/sportshike.mp4" alt="sportshike" autoplay></video>
+                    </div>
+                </div>            
+
+                <section>
+                    <header>
+                        <h1 id="videorec">&#128171 Video Recording &#128171</h1>
+                    </header>
+                    <article style="padding-top: 10px;">
+                        <center>
+                            <a href="Video/VIDEO RESUME BY MAY.mp4" target="_blank" title="View Video">
+                                <video controls style="width: 55%; height: auto;">
+                                    <source src="Video/VIDEO RESUME BY MAY.mp4" type="video/mp4">
+                                </video>                            
+                            </a>
+                        </center>
+                    </article>
+                </section>
+            </div>
+        </div>
+    </main>    
+
+    <footer>
+        <p>"Strive not to be a success, but rather to be of value." - Albert Einstein</p>
+        <p>Contact: <a href="mailto:6may.ux@gmail.com">6may.ux@gmail.com</a> | Phone: <a href="tel:+601170310405">011-70310405</a></p>
+        <p>&copy; 2024 Nur May Uzma Binti Mohd Solehuddin. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('time').innerHTML = new Date().toLocaleDateString();
+
+        let mybutton = document.getElementById("header");
+        window.onscroll = function() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        };
+
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+
+        function changeMedia(passion) {
+            var media;
+            if (passion == 'sports') {
+                media = "Video/sportshike.mp4";
+            } else if (passion == 'videography') {
+                media = "Video/videography.mp4";
+            } else if (passion == 'exploring') {
+                media = "Video/exploring.mp4";
+            }
+            document.getElementById('mymedia').src = media;
+        }
+        
+    </script>
+
+</body>
+</html>

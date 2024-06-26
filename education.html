@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education</title>
+    <style>
+        body {
+            font-family: 'Glacial Indifference', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-image: url(Picture/HEADER\ \(1\).jpg);
+            background-size: cover;
+        }
+        header {
+            font-size: 18px;
+            color: #ffffff;
+            text-align: center;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-image: url(Picture/hijautuabg.jpg);
+        }
+        .time, .logo {
+            position: absolute;
+            padding: 5px;
+            border-radius: 5px;
+        }
+        .time {
+            top: 25px;
+            right: 13px;
+            font-size: 16px;
+            color: #000;
+        }
+        .logo {
+            top: 1px;
+            left: 1px;
+        }
+        video.videobg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+        nav2 {
+            box-sizing: border-box;
+            margin-left: 4px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-image: url(Picture/hijaubg.jpg);
+            padding: 4px;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: row;
+        }
+        nav {
+            padding: 30px;
+            font-size: 16px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-image: url(Picture/hijaubg.jpg);
+        }
+        nav2 a {
+            color: #333;
+            border-radius: 5px;
+            text-align: center;
+            display: inline-block;
+            padding: 0 121px;
+            margin-top: 3px;
+            text-decoration: none;
+        }
+        nav a {
+            display: block;
+            color: #333;
+            padding: 13px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        nav a:hover {
+            background-color: #AA8D57;
+            color: white;
+            cursor: pointer;
+        }
+        nav2 a:hover {
+            background-color: #AA8D57;
+            color: white;
+            border-bottom-right-radius: 60px;
+            border-bottom-left-radius: 60px;
+            cursor: pointer;
+        }
+        main {
+            display: flex;
+            flex: 1;
+            flex-wrap: nowrap;
+            margin: 5px;
+        }
+        .main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 920px;
+        }
+        .media {
+            flex: 4;
+            padding: 1em;
+            background-color: #FFF;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-right: 5px;
+            margin-top: 20px;
+        }
+        .content {
+            padding-top: 30px;
+            text-align: center;
+            margin: 0 20px;
+            align-items: center;
+            padding-bottom: auto;
+        }
+        section {
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+        }
+        footer {
+            background-image: url(Picture/hijautuabg.jpg);
+            color: #fff;
+            padding: 1px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        button, .button-link {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 14px;
+            color: rgb(255, 255, 255);
+            background-color: #AA8D57;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover, .button-link:hover {
+            background-color: #8E6B45;
+        }
+        #topButton {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99;
+            font-size: 18px;
+            border: none;
+            outline: none;
+            background-color: #AA8D57;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 10px;
+            transition: background-color 0.3s;
+        }
+        #topButton:hover {
+            background-color: #8E6B45;
+        }
+        h2 {
+            font-family: 'Lobster', cursive;
+            color: #333;
+        }
+    </style>    
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Caveat+Brush&family=Glacial+Indifference&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <button onclick="topFunction()" id="topButton" title="Go to top">Top &#8593</button>
+
+    <video class="videobg" autoplay muted loop>
+        <source src="Video/greenbg.mp4" type="video/mp4">
+    </video>
+
+    <header>
+        <h1 style="color:#ffffff; font-family: 'Caveat Brush', cursive;">&#129361 EDUCATION &#129361</h1>
+        <div class="time" id="time"></div>
+        <div class="logo">
+            <img src="Picture/uitm.png" alt="uitm" style="width: 110px; height: 80px;"> <!-- Adjust width and height as needed -->
+        </div>
+    </header>
+
+    <main>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="aboutme.html">About Me</a>
+            <a href="#SPM" onclick="changeContent('SPM')" style="background-color: rgb(198, 198, 186);">Education</a>
+            <a href="attributes.html">Personal Attributes</a>
+            <a href="work.html">Work Experiences</a>
+            <a href="involvement.html">Active Involvement</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <section>
+            <nav2>
+                <a href="#SPM" onclick="changeContent('SPM')">SPM</a>
+                <a href="#STPM" onclick="changeContent('STPM')">STPM</a>
+                <a href="#DEGREE" onclick="changeContent('DEGREE')">DEGREE</a>
+                <a href="#MUET" onclick="changeContent('MUET')">ADDITIONAL (MUET)</a>
+            </nav2>
+            <section class="content">
+                <div id="content-area"></div>
+            </section>
+        </section>
+
+        <script onclick="changeContent('section')" style="background-color: rgb(198, 198, 186);">
+            function changeContent(section) {
+                let content = {
+                    "SPM": {
+                        text : `
+                            <div class="main">
+                                <div>
+                                    <h2>Sijil Pelajaran Malaysia (SPM)</h2>
+                                    <a href="https://youtu.be/rZoCBLc9xQo?feature=shared" target="_blank">
+                                        <img src="Picture/smktamparuli.jpg" alt="smktamparuli" style="width: 70%; height: auto;" title="View in YouTube">
+                                    </a>
+                                    <h3><i>SMK Tamparuli, Sabah</i></h3>
+                                </div>
+                                <div>
+                                    <p>Major: Science Stream</p>
+                                    <p>Year: 2019</p>
+                                    <p>Result: 2A 2A- 2B+ 2B 1C 1D </p>
+                                    <a href="Picture/spmresult.jpg" target="_blank">
+                                        <button>Click to View</button>
+                                    </a>
+                                </div>                                                                       
+                            </div>
+                        `
+                    },
+                    "STPM": {
+                        text: `
+                            <div class="main">
+                                <div>
+                                    <h2>Sijil Tinggi Pelajaran Malaysia (STPM)</h2>
+                                    <a href="https://youtu.be/rZoCBLc9xQo?feature=shared" target="_blank">
+                                        <img src="Picture/smktamparuli.jpg" alt="smktamparuli" style="width: 70%; height: auto;" title="View in YouTube">
+                                    </a>
+                                    <h3><i>SMK Tamparuli, Sabah</i></h3>
+                                </div>
+                                <div>
+                                    <p>Major: Science Stream</p>
+                                    <p>Year: 2021</p>
+                                    <p>CGPA: 3.33</p>
+                                    <a href="Picture/stpmresult.jpg" target="_blank">
+                                        <button>Click to View</button>
+                                    </a>
+                                </div>                                                                       
+                            </div>
+                        `
+                    },
+                    "DEGREE": {
+                        text: `
+                            <div class="main">
+                                <div>
+                                    <h2>Degree</h2>
+                                    <a href="https://youtu.be/rZoCBLc9xQo?feature=shared" target="_blank">
+                                        <img src="Picture/uitmpundana.jpg" alt="uitmpundana" style="width: 70%; height: auto;" title="View in YouTube">
+                                    </a>
+                                    <h3><i>Universiti Teknologi MARA, Puncak Perdana</i></h3>
+                                </div>
+                                <div>
+                                    <p>Major: Bachelor of Information Science (Honours) of Library Management</p>
+                                    <p>Year: 2022-Recent</p>
+                                </div>
+                                <div style="padding-top: 15px;">
+                                    <h4>SEMESTER 1</h4>
+                                    <p>CGPA: 3.67</p>
+                                    <a href="Picture/deg1result.pdf" target="_blank">
+                                        <button>Click to View</button>
+                                    </a>
+                                </div>
+                                <div style="padding-top: 25px;">
+                                    <h4>SEMESTER 2</h4>
+                                    <p>CGPA: 3.71</p>
+                                    <a href="Picture/deg2result.pdf" target="_blank">
+                                        <button>Click to View</button>
+                                    </a>
+                                </div>
+                                <div style="padding-top: 25px;">
+                                    <h4>SEMESTER 3</h4>
+                                    <p>CGPA: 3.69</p>
+                                    <a href="Picture/deg3result.pdf" target="_blank">
+                                        <button>Click to View</button>
+                                    </a>
+                                </div>
+                            </div>
+                        `
+                    },
+                    "MUET": {
+                        text: `
+                            <div class="main">
+                                <div>
+                                    <h2>Malaysian University English Test (MUET)</h2>
+                                    <a href="Picture/muet.jpg" target="_blank">
+                                        <img src="Picture/muet.jpg" alt="muet" style="width: 43%; height: auto;" title="View Image">
+                                    </a>
+                                    <p>Band: 4.0</p>
+                                </div>                                                                  
+                            </div>
+                        `
+                    },
+                };
+
+                let contentArea = document.getElementById("content-area");
+                contentArea.innerHTML = content[section].text;
+            }
+
+            document.getElementById('time').innerHTML = new Date().toLocaleDateString();
+
+            let mybutton = document.getElementById("topButton");
+            window.onscroll = function() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    mybutton.style.display = "block";
+                } else {
+                    mybutton.style.display = "none";
+                }
+            };
+
+            function topFunction() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
+        </script>        
+    </main>
+
+    <footer>
+        <p>"Strive not to be a success, but rather to be of value." - Albert Einstein</p>
+        <p>Contact: <a href="mailto:6may.ux@gmail.com">6may.ux@gmail.com</a> | Phone: <a href="tel:+601170310405">011-70310405</a></p>
+        <p>&copy; 2024 Nur May Uzma Binti Mohd Solehuddin. All rights reserved.</p>
+    </footer>
+
+</body>
